@@ -1,0 +1,456 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+
+#rotate-message, #content-msg, #pc-message {
+    height: 100vh;
+    width: 100vw;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 22px;
+}
+
+#rotate-message {
+    background: #000;
+    color: #fff;
+}
+
+#content-msg {
+    background: #f0f0f0;
+    color: #333;
+    flex-direction: column;
+}
+
+#pc-message {
+    background: #222;
+    color: #ff0;
+}
+
+/* Portrait trên điện thoại: hiện thông báo xoay ngang */
+@media screen and (orientation:portrait) and (max-width: 768px) {
+    #rotate-message {
+        display: flex;
+    }
+
+    #content {
+        display: none;
+    }
+
+    #pc-message {
+        display: none;
+    }
+}
+
+/* Landscape trên điện thoại: hiện nội dung */
+@media screen and (orientation:landscape) and (max-width: 768px) {
+    #rotate-message {
+        display: none;
+    }
+
+    #content {
+        display: flex;
+    }
+
+    #pc-message {
+        display: none;
+    }
+}
+
+/* PC hoặc iPad (màn hình lớn): chỉ hiện thông báo dành cho PC */
+@media screen and (min-width: 769px) {
+    #rotate-message {
+        display: none;
+    }
+
+    #content {
+        display: none;
+    }
+
+    #pc-message {
+        display: flex;
+    }
+}
+
+
+/*** Cấu trúc Flexbox cho toàn bộ trang **/
+.layout-flex {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+    background: linear-gradient(180deg,
+            #2c2a7c 0%,
+            /* xanh tím đậm phía trên */
+            #5a2ca0 35%,
+            /* tím */
+            #8c2cbf 60%,
+            /* tím hồng */
+            #d93b82 100%
+            /* hồng đậm phía dưới */
+        );
+    background-attachment: fixed;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    font-size: 14px;
+    font-family: 'Roboto Condensed', sans-serif;
+    overflow-x: hidden !important;
+}
+
+header {
+    flex-shrink: 0;
+    z-index: 1030;
+}
+
+footer {
+    flex-shrink: 0;
+    z-index: 1030;
+}
+
+main {
+    flex: 1;
+    overflow-y: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/***************************************************/
+.button_left {
+    text-align: center;
+}
+
+.button_left ul li a {
+    display: inline-block;
+    padding: 10px 15px;
+    color: white;
+    text-decoration: none;
+}
+
+.button_left li i {
+    font-size: 24px;
+}
+
+/***************************************************/
+.button_left ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+}
+
+.button_left ul li {
+    width: 80px;
+    height: 80px;
+    border-radius: 15px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transform: transform 0.2s;
+}
+
+/* Mỗi màu riêng cho từng mục */
+.bg-orange {
+    background-color: #f57c00;
+}
+
+.bg-green {
+    background-color: #388e3c;
+}
+
+.bg-blue {
+    background-color: #1976d2;
+}
+
+.bg-red {
+    background-color: #e64a19;
+}
+
+.bg-yellow {
+    background-color: #fbc02d;
+}
+
+/***************************************************/
+.button_right {
+    text-align: center;
+}
+
+.button_right ul li a {
+    display: inline-block;
+    padding: 10px 15px;
+    color: #D1A426 !important;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.button_right li i {
+    font-size: 24px;
+}
+
+/***************************************************/
+.button_right ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+}
+
+.button_right ul li {
+    width: 80px;
+    height: 80px;
+    border-radius: 15px;
+    color: #D1A426 !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transform: transform 0.2s;
+    background-color: #372AAC;
+}
+
+/***************************************************/
+/*.login_wrapper {
+    background-color: #1a1a1a;
+    border: 2px solid #000;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    margin: 0 auto;
+}*/
+
+.btn_login {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 1px solid #ffffff;
+    /* Viền trắng */
+    border-radius: 10px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.btn_login a {
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.btn_login i {
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+.btn_login:hover {
+    background-color: #0056b3;
+    color: white;
+    opacity: 0.9;
+}
+
+@media (max-width: 576px) {
+    .btn_login {
+        padding: 3px 0px;
+    }
+
+    .btn_login a {
+        font-size: 12px;
+        text-transform: none;
+        padding: 2px;
+    }
+
+    .btn_login i {
+        font-size: 16px;
+        margin-right: 0px;
+    }
+}
+
+@media screen and (max-width: 900px) and (orientation: landscape),
+screen and (max-width: 900px) and (aspect-ratio: 16/9) {
+    .btn_login {
+        padding: 3px 5px;
+        max-width: 220px;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .btn_login a {
+        font-size: 13px;
+        text-transform: none;
+        padding: 2px;
+    }
+}
+
+/***************************************************/
+.button-footer ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+}
+
+.button-footer ul li {
+    height: 50px;
+    border-radius: 15px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transform: transform 0.2s;
+    background-color: #f57c00;
+}
+
+.button-footer ul li a {
+    font-size: 16px;
+    color: white !important;
+}
+
+/***************************************************/
+/* Khi màn hình thấp (mobile xoay ngang) */
+@media (max-height: 450px) {
+    .card .bd-placeholder-img {
+        height: 100px !important;
+        /* giảm thôi */
+    }
+
+    .card-body {
+        padding: 0.75rem !important;
+    }
+
+    .card-body p {
+        font-size: 0.8rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .btn-group .btn {
+        padding: 2px 6px !important;
+        font-size: 0.7rem;
+    }
+
+    .album.py-5 {
+        padding-top: 1rem !important;
+        padding-bottom: 1rem !important;
+    }
+
+    main {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+    }
+
+    header {
+        padding: 0.25rem 0 !important;
+    }
+
+    footer {
+        padding: 0.25rem 0 !important;
+    }
+}
+
+/***************************************************/
+.mySwiper {
+    width: 90%;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.green {
+    background: #23c46e;
+}
+
+.red {
+    background: #e84343;
+}
+
+.blue {
+    background: #3487f0;
+}
+
+.orange {
+    background: #ca440f;
+}
+
+.card-item h3 {
+    margin: 0;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.card-item p {
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+.btn-list {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+}
+
+.btn-list span {
+    background: rgba(255, 255, 255, 0.25);
+    padding: 6px 12px;
+    border-radius: 8px;
+}
+
+.custom-nav {
+    width: 50px;
+    height: 50px;
+    background: #ffb347;
+    border-radius: 50%;
+    opacity: 1;
+}
+
+.custom-nav::after {
+    font-size: 20px;
+    color: #fff;
+}
+
+.carousel-wrapper {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.swiper {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.swiper-wrapper {
+    align-items: center;
+}
+
+.swiper-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    transition: 0.4s;
+    transform-origin: center;
+}
+
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 285px;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+}

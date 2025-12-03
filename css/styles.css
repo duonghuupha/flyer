@@ -357,13 +357,68 @@ screen and (max-width: 900px) and (aspect-ratio: 16/9) {
     footer {
         padding: 0.25rem 0 !important;
     }
+
+    .button_left ul li {
+        width: 40px;
+        height: 40px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .button_left li span{
+        display: none;
+    }
+
+    .button_right ul li {
+        width: 40px;
+        height: 40px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .button_right li span{
+        display: none;
+    }
+
+}
+/***************************************************/
+.owl-carousel .card-item h3 {
+    margin: 0;
+    font-weight: bold;
+    font-size: 22px;
 }
 
-/***************************************************/
-.mySwiper {
-    width: 90%;
-    padding-top: 60px;
-    padding-bottom: 60px;
+.owl-carousel .card-item p {
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+.owl-carousel .card-item .btn-list {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+}
+
+.owl-carousel .card-item .btn-list span {
+    background: rgba(255, 255, 255, 0.25);
+    padding: 6px 12px;
+    border-radius: 8px;
+}
+
+.owl-carousel .card-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    transition: 0.4s;
+    transform-origin: center;
+    background-position: center;
+    background-size: cover;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
 }
 
 .green {
@@ -380,77 +435,4 @@ screen and (max-width: 900px) and (aspect-ratio: 16/9) {
 
 .orange {
     background: #ca440f;
-}
-
-.card-item h3 {
-    margin: 0;
-    font-weight: bold;
-    font-size: 22px;
-}
-
-.card-item p {
-    margin-top: 5px;
-    font-size: 14px;
-}
-
-.btn-list {
-    margin-top: 15px;
-    display: flex;
-    gap: 10px;
-}
-
-.btn-list span {
-    background: rgba(255, 255, 255, 0.25);
-    padding: 6px 12px;
-    border-radius: 8px;
-}
-
-.custom-nav {
-    width: 50px;
-    height: 50px;
-    background: #ffb347;
-    border-radius: 50%;
-    opacity: 1;
-}
-
-.custom-nav::after {
-    font-size: 20px;
-    color: #fff;
-}
-
-.carousel-wrapper {
-    width: 100%;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-}
-
-.swiper {
-    width: 100%;
-    padding-top: 50px;
-    padding-bottom: 50px;
-}
-
-.swiper-wrapper {
-    align-items: center;
-}
-
-.swiper-slide {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    transition: 0.4s;
-    transform-origin: center;
-}
-
-.swiper-slide {
-    background-position: center;
-    background-size: cover;
-    width: 285px;
-    height: 200px;
-    position: relative;
-    overflow: hidden;
-    border-radius: 12px;
 }

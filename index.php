@@ -84,59 +84,21 @@
     </header>
 
     <main>
-        <div class="container">
-            <!--<div class="swiper mySwiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide card-item green">
-                        <h3>SET PRIMARY</h3>
-                        <p>BEGINNER ENGLISH</p>
-                        <div class="btn-list">
-                            <span>50</span>
-                            <span>20</span>
-                            <span>5</span>
-                        </div>
-                    </div>
-                    <div class="swiper-slide card-item red">
-                        <h3>IELTS</h3>
-                        <p>Full Skill</p>
-                        <div class="btn-list">
-                            <span>80</span>
-                            <span>35</span>
-                            <span>10</span>
-                        </div>
-                    </div>
-                    <div class="swiper-slide card-item blue">
-                        <h3>TOEIC</h3>
-                        <p>Quick Test</p>
-                        <div class="btn-list">
-                            <span>60</span>
-                            <span>15</span>
-                            <span>8</span>
-                        </div>
-                    </div>
-                    <div class="swiper-slide card-item orange">
-                        <h3>TOEIC</h3>
-                        <p>Quick Test</p>
-                        <div class="btn-list">
-                            <span>60</span>
-                            <span>15</span>
-                            <span>8</span>
-                        </div>
-                    </div>
-                </div>
-            </div>-->
+        <div class="container-fluid">
             <div class="owl-carousel owl-theme">
-                <?php
-                $array_colors = ['green', 'red', 'blue', 'orange'];
-                for ($i = 1; $i <= 10; $i++) {
-                ?>
-                <div class="card-item <?php echo array_rand($array_colors) ?>">
-                    <h3>TOEIC <?php echo $i ?></h3>
-                    <p>Quick Test</p>
-                    <div class="btn-list">
-                        <span>60</span>
-                        <span>15</span>
-                        <span>8</span>
+                <?php for ($i = 1; $i <= 10; $i++){ ?>
+                <div class="card-item">
+                    <div class="bg_img">
+                        <img src="img/1.png" alt="TOEIC">
+                    </div>
+                    <div class="card-detail">
+                        <h3>TOEIC <?php echo $i ?></h3>
+                        <p>Quick Test</p>
+                        <div class="level-tag">
+                            <span>B1</span>
+                            <span>B1</span>
+                            <span>B1</span>
+                        </div>
                     </div>
                 </div>
                 <?php
@@ -172,9 +134,8 @@
                 margin:10,
                 responsiveClass:true,
                 dots: false,
-                autoplay: true,
-                autoplayTimeout: 5000,
-                autoplayHoverPause: true,
+                center: true,
+                smartSpeed: 600,
                 responsive:{
                     0:{
                         items:1,
@@ -185,7 +146,7 @@
                         nav:false
                     },
                     1000:{
-                        items:5,
+                        items:3,
                         nav:false
                     }
                 }

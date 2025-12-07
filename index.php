@@ -85,24 +85,136 @@
     <main>
         <div class="container-fluid">
             <div class="owl-carousel owl-theme">
-                <?php for ($i = 1; $i <= 10; $i++){ ?>
                 <div class="card-item">
                     <div class="bg_img">
-                        <img src="img/1.png" alt="TOEIC">
+                        <img src="img/1.png" alt="PET">
                     </div>
                     <div class="card-detail">
-                        <h3>TOEIC <?php echo $i ?></h3>
-                        <p>Quick Test</p>
+                        <h3>PET</h3>
+                        <p>Đề thị PET Cambridge</p>
                         <div class="level-tag">
-                            <span>B1</span>
-                            <span>B1</span>
                             <span>B1</span>
                         </div>
                     </div>
                 </div>
-                <?php
-                }
-                ?>
+                <div class="card-item">
+                    <div class="bg_img">
+                        <img src="img/2.png" alt="TEOFL PRIMARY">
+                    </div>
+                    <div class="card-detail">
+                        <h3>TOEFL PRIMARY</h3>
+                        <p>Hành tinh tương lai</p>
+                        <div class="level-tag">
+                            <span>A1</span>
+                            <span>A2</span>
+                            <span>B1</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-item">
+                    <div class="bg_img">
+                        <img src="img/3.png" alt="STARTERS">
+                    </div>
+                    <div class="card-detail">
+                        <h3>STARTERS</h3>
+                        <p>Hành tinh kẹo ngọt</p>
+                        <div class="level-tag">
+                            <span>A1</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-item">
+                    <div class="bg_img">
+                        <img src="img/4.png" alt="MOVERS">
+                    </div>
+                    <div class="card-detail">
+                        <h3>MOVERS</h3>
+                        <p>Hành tinh khủng long</p>
+                        <div class="level-tag">
+                            <span>A1</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-item">
+                    <div class="bg_img">
+                        <img src="img/5.png" alt="FLYERS">
+                    </div>
+                    <div class="card-detail">
+                        <h3>FLYERS</h3>
+                        <p>Hành tinh những giấc mơ</p>
+                        <div class="level-tag">
+                            <span>A2</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-item">
+                    <div class="bg_img">
+                        <img src="img/6.png" alt="TOEFL JUNIOR">
+                    </div>
+                    <div class="card-detail">
+                        <h3>TOEFL JUNIOR</h3>
+                        <p>Toefl Junior</p>
+                        <div class="level-tag">
+                            <span>A2</span>
+                            <span>B1</span>
+                            <span>B2</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-item">
+                    <div class="bg_img">
+                        <img src="img/7.png" alt="KET">
+                    </div>
+                    <div class="card-detail">
+                        <h3>KET</h3>
+                        <p>Đề thi KET Cambirdge</p>
+                        <div class="level-tag">
+                            <span>A2</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-item">
+                    <div class="bg_img">
+                        <img src="img/8.png" alt="IOE">
+                    </div>
+                    <div class="card-detail">
+                        <h3>IOE</h3>
+                        <p>Dành cho học sinh lơp 3-5</p>
+                        <div class="level-tag">
+                            <span>A1</span>
+                            <span>A1</span>
+                            <span>A2</span>
+                            <span>B1</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-item">
+                    <div class="bg_img">
+                        <img src="img/9.png" alt="SET PRIMARY">
+                    </div>
+                    <div class="card-detail">
+                        <h3>SET PRIMARY</h3>
+                        <p>Bộ đề học kỳ Bộ giáo dục</p>
+                        <div class="level-tag">
+                            <span>A1</span>
+                            <span>A1</span>
+                            <span>A2</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-item">
+                    <div class="bg_img">
+                        <img src="img/9.png" alt="SET JUNIOR">
+                    </div>
+                    <div class="card-detail">
+                        <h3>SET JUNIOR</h3>
+                        <p>Bộ đề học kỳ Bộ giáo dục</p>
+                        <div class="level-tag">
+                            <span>A2</span>
+                            <span>B1</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </main>

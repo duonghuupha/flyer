@@ -9,7 +9,6 @@
     <link href="css/bootstrap-icons.min.css" rel="stylesheet">
     <link href="css/owl.carousel.min.css" rel="stylesheet">
     <link href="css/owl.theme.default.min.css" rel="stylesheet">
-    <link href="css/styles.css" rel="stylesheet">
 </head>
 
 <body class="layout-flex">
@@ -127,31 +126,8 @@
     <script src="js/jquery-2.2.0.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
-    <script>
-        $(document).ready(function(){
-            $(".owl-carousel").owlCarousel({
-                loop:true,
-                margin:10,
-                responsiveClass:true,
-                dots: false,
-                nav: true,
-                navText: ["", ""],
-                center: true,
-                smartSpeed: 600,
-                responsive:{
-                    0:{
-                        items:1
-                    },
-                    600:{
-                        items:3
-                    },
-                    1000:{
-                        items:3
-                    }
-                }
-            });
-        });
-    </script>
+    <script src="js/app.js"></script>
+    <script src="js/plugin_build.js"></script>
 </body>
 
 </html>

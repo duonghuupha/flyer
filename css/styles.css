@@ -1,78 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
-
-#rotate-message, #content-msg, #pc-message {
-    height: 100vh;
-    width: 100vw;
-    display: none;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-size: 22px;
-}
-
-#rotate-message {
-    background: #000;
-    color: #fff;
-}
-
-#content-msg {
-    background: #f0f0f0;
-    color: #333;
-    flex-direction: column;
-}
-
-#pc-message {
-    background: #222;
-    color: #ff0;
-}
-
-/* Portrait trên điện thoại: hiện thông báo xoay ngang */
-@media screen and (orientation:portrait) and (max-width: 768px) {
-    #rotate-message {
-        display: flex;
-    }
-
-    #content {
-        display: none;
-    }
-
-    #pc-message {
-        display: none;
-    }
-}
-
-/* Landscape trên điện thoại: hiện nội dung */
-@media screen and (orientation:landscape) and (max-width: 768px) {
-    #rotate-message {
-        display: none;
-    }
-
-    #content {
-        display: flex;
-    }
-
-    #pc-message {
-        display: none;
-    }
-}
-
-/* PC hoặc iPad (màn hình lớn): chỉ hiện thông báo dành cho PC */
-@media screen and (min-width: 769px) {
-    #rotate-message {
-        display: none;
-    }
-
-    #content {
-        display: none;
-    }
-
-    #pc-message {
-        display: flex;
-    }
-}
-
-
-/*** Cấu trúc Flexbox cho toàn bộ trang **/
 .layout-flex {
     display: flex;
     flex-direction: column;
@@ -121,8 +47,34 @@ main {
     align-items: center;
 }
 
-/***************************************************/
-.button_left {
+/**************************Cấu hình thông báo khi màn hình chưa xoay ngang*******************************/
+#rotate-message, #content-msg, #pc-message {
+    height: 100vh;
+    width: 100vw;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 22px;
+}
+
+#rotate-message {
+    background: #000;
+    color: #fff;
+}
+
+#content-msg {
+    background: #f0f0f0;
+    color: #333;
+    flex-direction: column;
+}
+
+#pc-message {
+    background: #222;
+    color: #ff0;
+}
+/*********************Button bên trái phía trên******************************/
+.pc-device .button_left {
     text-align: center;
 }
 
@@ -137,7 +89,6 @@ main {
     font-size: 24px;
 }
 
-/***************************************************/
 .button_left ul {
     display: flex;
     gap: 20px;
@@ -158,7 +109,6 @@ main {
     transform: transform 0.2s;
 }
 
-/* Mỗi màu riêng cho từng mục */
 .bg-orange {
     background-color: #f57c00;
 }
@@ -178,8 +128,7 @@ main {
 .bg-yellow {
     background-color: #fbc02d;
 }
-
-/***************************************************/
+/********************Button bên phải phía trên*******************************/
 .button_right {
     text-align: center;
 }
@@ -196,7 +145,6 @@ main {
     font-size: 24px;
 }
 
-/***************************************************/
 .button_right ul {
     display: flex;
     gap: 20px;
@@ -217,28 +165,13 @@ main {
     transform: transform 0.2s;
     background-color: #372AAC;
 }
-
-/***************************************************/
-/*.login_wrapper {
-    background-color: #1a1a1a;
-    border: 2px solid #000;
-    border-radius: 16px;
-    padding: 20px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    width: fit-content;
-    margin: 0 auto;
-}*/
-
+/**********************Button Đăng nhập ở giữa trang*****************************/
 .btn_login {
     background-color: #007bff;
     color: white;
     padding: 10px 20px;
     border-radius: 5px;
     border: 1px solid #ffffff;
-    /* Viền trắng */
     border-radius: 10px;
     font-weight: 700;
     cursor: pointer;
@@ -259,41 +192,7 @@ main {
     color: white;
     opacity: 0.9;
 }
-
-@media (max-width: 576px) {
-    .btn_login {
-        padding: 3px 0px;
-    }
-
-    .btn_login a {
-        font-size: 12px;
-        text-transform: none;
-        padding: 2px;
-    }
-
-    .btn_login i {
-        font-size: 16px;
-        margin-right: 0px;
-    }
-}
-
-@media screen and (max-width: 900px) and (orientation: landscape),
-screen and (max-width: 900px) and (aspect-ratio: 16/9) {
-    .btn_login {
-        padding: 3px 5px;
-        max-width: 220px;
-        margin: 0 auto;
-        display: block;
-    }
-
-    .btn_login a {
-        font-size: 13px;
-        text-transform: none;
-        padding: 2px;
-    }
-}
-
-/***************************************************/
+/***********************Button footer (Kiểm tra trình độ)****************************/
 .button-footer ul {
     display: flex;
     gap: 20px;
@@ -318,76 +217,10 @@ screen and (max-width: 900px) and (aspect-ratio: 16/9) {
     font-size: 16px;
     color: white !important;
 }
-
-/***************************************************/
-/* Khi màn hình thấp (mobile xoay ngang) */
-@media (max-height: 450px) {
-    .card .bd-placeholder-img {
-        height: 100px !important;
-        /* giảm thôi */
-    }
-
-    .card-body {
-        padding: 0.75rem !important;
-    }
-
-    .card-body p {
-        font-size: 0.8rem;
-        margin-bottom: 0.5rem;
-    }
-
-    .btn-group .btn {
-        padding: 2px 6px !important;
-        font-size: 0.7rem;
-    }
-
-    .album.py-5 {
-        padding-top: 1rem !important;
-        padding-bottom: 1rem !important;
-    }
-
-    main {
-        padding-top: 0 !important;
-        padding-bottom: 0 !important;
-    }
-
-    header {
-        padding: 0.25rem 0 !important;
-    }
-
-    footer {
-        padding: 0.25rem 0 !important;
-    }
-
-    .button_left ul li {
-        width: 40px;
-        height: 40px;
-        border-radius: 5px;
-        cursor: pointer;
-    }
-
-    .button_left li span {
-        display: none;
-    }
-
-    .button_right ul li {
-        width: 40px;
-        height: 40px;
-        border-radius: 5px;
-        cursor: pointer;
-    }
-
-    .button_right li span {
-        display: none;
-    }
-
-}
-
-/***************************************************/
+/***********************Owl Carousel cho trang chủ****************************/
 .owl-carousel {
     display: flex;
     gap: 20px;
-    /* khoảng cách ngang giữa các card */
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
@@ -495,15 +328,13 @@ screen and (max-width: 900px) and (aspect-ratio: 16/9) {
     width: 100%;
     transform: translateY(-50%);
     pointer-events: none;
-    /* tránh che nội dung */
 }
 
 .owl-nav button {
     pointer-events: auto;
 }
 
-.owl-nav .owl-prev,
-.owl-nav .owl-next {
+.owl-nav .owl-prev, .owl-nav .owl-next {
     width: 70px;
     height: 90px;
     background-size: contain !important;
@@ -519,7 +350,6 @@ screen and (max-width: 900px) and (aspect-ratio: 16/9) {
 
 .owl-nav .owl-prev {
     left: -10px;
-    /* bạn chỉnh lại cho phù hợp */
     background-image: url("../img/arrow_left.png") !important;
 }
 
@@ -527,45 +357,6 @@ screen and (max-width: 900px) and (aspect-ratio: 16/9) {
     right: -10px;
     background-image: url("../img/arrow_right.png") !important;
 }
-
-
-@media screen and (max-height: 450px) {
-
-    .card-item {
-        width: 180px;
-        margin: 20px auto;
-    }
-
-    .card-item .bg_img {
-        width: 180px;
-        height: 180px;
-    }
-
-    .card-item .card-detail {
-        width: 70%;
-        padding: 12px 8px 20px;
-        bottom: -9px;
-        border-radius: 10px;
-    }
-
-    .card-item h3 {
-        font-size: 16px;
-        margin-bottom: 2px;
-    }
-
-    .card-item p {
-        font-size: 11px;
-    }
-
-    .card-item .level-tag {
-        bottom: -15px;
-        gap: 6px;
-    }
-
-    .card-item .level-tag span {
-        font-size: 11px;
-        padding: 4px 8px;
-        min-width: 26px;
-        border-radius: 8px;
-    }
-}
+/***********************************************************************/
+/*************Kết thúc phần cho máy tính********************************/
+/***********************************************************************/

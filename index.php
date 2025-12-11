@@ -204,7 +204,7 @@
                 </div>
                 <div class="card-item">
                     <div class="bg_img">
-                        <img src="img/9.png" alt="SET JUNIOR">
+                        <img src="img/10.png" alt="SET JUNIOR">
                     </div>
                     <div class="card-detail">
                         <h3>SET JUNIOR</h3>
